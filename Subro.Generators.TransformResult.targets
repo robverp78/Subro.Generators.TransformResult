@@ -1,0 +1,12 @@
+<Project>
+  <Target Name="_CheckSubroTransformResultLangVersion" BeforeTargets="CoreCompile">
+    <Warning
+      Condition="'$(LangVersion)' != ''
+                 AND '$(LangVersion)' != 'latest'
+                 AND '$(LangVersion)' != 'preview'
+                 AND '$(LangVersion)' != 'latestMajor'
+                 AND '$(LangVersion)' != 'default'
+                 AND $([MSBuild]::VersionLessThan('$(LangVersion)', '12.0'))"
+      Text="Subro.Generators.TransformResult requires C# language version 12.0 or later. Current LangVersion is '$(LangVersion)'. Please set &lt;LangVersion&gt;12.0&lt;/LangVersion&gt; or higher in your project." />
+  </Target>
+</Project>

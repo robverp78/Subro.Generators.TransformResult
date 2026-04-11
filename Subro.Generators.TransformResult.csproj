@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
+		<LangVersion>12.0</LangVersion>
+		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+		<SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<DevelopmentDependency>true</DevelopmentDependency>
+		<NoPackageAnalysis>true</NoPackageAnalysis>
+		<BuildOutputTargetFolder>contentFiles\cs\any</BuildOutputTargetFolder>
+
+		<PackageId>Subro.Generators.TransformResult</PackageId>
+		<Version>1.4.0</Version>
+		<Authors>Robert Verpalen</Authors>
+		<Description>Helpers to reduce boilerplate code when creating generators</Description>
+		<PackageTags>roslyn;source-generator;incremental-generator;diagnostics;codegen</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://gist.github.com/robverp78/1742054dec304708112dc0e1e00201d2</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
+
+	<!-- Source files packed as contentFiles -->
+	<ItemGroup>
+		<Compile Include="TransformResult.cs" Pack="true" PackagePath="contentFiles\cs\any\Subro.Generators\TransformResult.cs" BuildAction="Compile" CopyToOutput="false" />
+		<Compile Include="Diagnostics.cs" Pack="true" PackagePath="contentFiles\cs\any\Subro.Generators\Diagnostics.cs" BuildAction="Compile" CopyToOutput="false" />
+		<Compile Include="IsExternalInit.cs" Pack="false" BuildAction="Compile" CopyToOutput="false" />
+		<Compile Include="LocationInfo.cs" Pack="true" PackagePath="contentFiles\cs\any\Subro.Generators\LocationInfo.cs" BuildAction="Compile" CopyToOutput="false" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="\" />
+		<None Include="Subro.Generators.TransformResult.targets" Pack="true" PackagePath="build\" />
+		<None Include="Subro.Generators.TransformResult.targets" Pack="true" PackagePath="buildTransitive\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="5.0.0" />
+	</ItemGroup>
+</Project>
