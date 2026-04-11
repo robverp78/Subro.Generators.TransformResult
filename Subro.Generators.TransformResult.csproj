@@ -11,13 +11,13 @@
 		<BuildOutputTargetFolder>contentFiles\cs\any</BuildOutputTargetFolder>
 
 		<PackageId>Subro.Generators.TransformResult</PackageId>
-		<Version>1.4.0</Version>
+		<Version>1.4.1</Version>
 		<Authors>Robert Verpalen</Authors>
-		<Description>Helpers to reduce boilerplate code when creating generators</Description>
+		<Description>Helps streamline incremental generator transfomrations and diagnostics</Description>
 		<PackageTags>roslyn;source-generator;incremental-generator;diagnostics;codegen</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<RepositoryUrl>https://gist.github.com/robverp78/1742054dec304708112dc0e1e00201d2</RepositoryUrl>
+		<RepositoryUrl>https://github.com/robverp78/Subro.Generators.TransformResult</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 
